@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body>
+    <video id="player"></video>
+    <video id="opponent"></video>>
+    <script type="text/javascript">
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then((stream) => {
+            const $video = document.getElementById("player");
+            $video.srcObject = stream;
+            $video.play();
+        })
+    </script>
+</body>
+
+</html>

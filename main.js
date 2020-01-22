@@ -1,4 +1,4 @@
-const signaling = new SignalingChannel();
+const signaling = new WebSocket('ws://localhost:8080');
 const constraints = { audio: true, video: true };
 const configuration = { iceServers: [{ urls: 'stuns:stun.example.org' }] };
 const pc = new RTCPeerConnection(configuration);
